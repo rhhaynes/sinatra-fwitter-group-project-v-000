@@ -1,0 +1,10 @@
+<h2>Tweet Index</h2>
+
+<% User.all.each do |user| %>
+  <h3><%= user.username %>:</h3>
+  <ol>
+    <% user.tweets.each do |tweet| %>
+      <li><%= tweet.content %></li>
+    <% end %>
+  </ol>
+<% end %>
